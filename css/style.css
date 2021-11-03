@@ -1,0 +1,53 @@
+.tag-container {
+    --bg-color-active: #008000;
+    --bg-color-active-hover: #356fa1;
+    --txt-color-active: #fff;
+    --bg-color-inactive: #2b5579;
+    --bg-color-inactive-hover: #039d03;
+    --txt-color-inactive: #fff;
+}
+
+div.tag {
+    min-width: 60px;
+    width: fit-content;
+    overflow: hidden;
+    height: 30px;
+    text-align: center;
+    color: var(--txt-color-inactive);
+    background-color: var(--bg-color-inactive);
+    margin: 0.5em;
+    padding: 0 0.8em 0 0.8em;
+    border-radius: 7px;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div.tag:hover {
+    background-color: var(--bg-color-active-hover);
+    ;
+}
+
+div.tag.active {
+    color: var(--txt-color-active);
+    background-color: var(--bg-color-active);
+}
+
+div.tag.active:hover {
+    background-color: var(--bg-color-inactive-hover);
+    ;
+}
+
+div.tag-container {
+    background: #e9e9e9;
+    min-width: 400px;
+    min-height: 260px;
+    max-width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}

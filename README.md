@@ -1,5 +1,18 @@
 # Form-Input Tag/Label List
 
+## Usage
+Download the `style.css` and `TagList.js` files and import them in your HTML like so: 
+```html 
+<head>
+    <!--...-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!--...-->
+    <script src="js/TagList.js"></script>
+</body>
+
+```
 In your `<form>` create a div element with a `name` attribute and add `tag-container` to the `class` attribute
 ```html
 <div name="it-giants" class="tag-container">
@@ -13,12 +26,15 @@ In your `<form>` create a div element with a `name` attribute and add `tag-conta
     <!--...-->
 </div>
 ```
+Now in your own JS or HTML in a `<script>` tag, create an instance of the TagList Class:
+```js
+taglist_container = new TagList('div[name=it-giants]');
+```
+Now everything should be good to go and you should see something like this:
 
-And you'll get something like this:
+![preview image with several rows of names in blue or green blocks](doc/preview.png)
 
-![preview image with several rows of names in blue or green blocks](preview.png)
-
-Where I clicked on `Elon Musk` and then `Steve Wozniak`. The three elements with the class `active` were automatically added when the DOM was ready.
+Here I clicked on `Elon Musk` and then `Steve Wozniak`. The three elements with the class `active` were automatically added when the instance of the class was created.
 
 ## How it works
 The JS code automatically adds hidden inputs to a `<span>` element at the top of the container and removes them again if deselected.
